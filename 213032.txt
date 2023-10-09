@@ -1,0 +1,194 @@
+Q1:
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Number();  
+        }
+        private static void Number()
+        {
+            Console.WriteLine($"int uses {sizeof(int)} buytes in the number in the range:\n\n " + $"{int.MinValue:No} to {int.MaxValue}:\n");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine($"double uses {sizeof(double)} buytes in the number in the range:\n\n " + $"{double.MinValue:No} to {double.MaxValue}:\n");
+
+            Console.WriteLine("-------------------------");
+            Console.WriteLine($"decimal uses {sizeof(decimal)} buytes in the number in the range:\n\n " + $"{decimal.MinValue:No} to {decimal.MaxValue}:\n");
+        }
+    }
+}
+
+Q2:
+using System;
+
+namespace Numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ExploringNumbers();
+            AssignLocalVariables();
+        }
+        private static void AssignLocalVariables()
+        {
+            int population = 66_000_000; // 66 million in UK
+            double weight = 1.88; // in kilograms
+            decimal price = 4.99M; // in pounds sterling
+            string fruit = "Apples"; // strings use double-quotes
+            char letter = 'Z'; // chars use single-quotes
+            bool happy = true; // Booleans have value of true or false
+        }
+        private static void ExploringNumbers()
+        {
+            Console.WriteLine($"int uses {sizeof(int)} buytes in the number in the range:\n\n " + $"{int.MinValue:No} to {int.MaxValue}:\n");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine($"double uses {sizeof(double)} buytes in the number in the range:\n\n " + $"{double.MinValue:No} to {double.MaxValue}:\n");
+
+            Console.WriteLine("-------------------------");
+            Console.WriteLine($"decimal uses {sizeof(decimal)} buytes in the number in the range:\n\n " + $"{decimal.MinValue:No} to {decimal.MaxValue}:\n");
+        }
+    }
+}
+
+Q3:
+
+using System;
+namespace ValueTypeTest
+{
+    class DemoRefDataTypes
+    {
+        static void Main()
+        {
+            // declaring string
+            string a = "Salam";
+            //append in a
+            a += "for";
+            a = a + "All";
+            Console.WriteLine(a);
+            // declare object obj
+            object obj;
+            obj = 20;
+            Console.WriteLine(obj);
+            // to show type of object using GetType()
+            Console.WriteLine(obj.GetType());
+        }
+    }
+}
+
+Q4:
+
+using System;
+namespace Pointerprogram
+{
+    class DemoPointers
+    {
+        static void Main()
+        {
+            unsafe
+            {
+                // declare variable
+                int n = 10;
+                // store variable n address location in pointer variable p
+                int* p = &n;
+                Console.WriteLine("Value :{0}", n);
+                Console.WriteLine("Address :{0}", (int)p);
+            }
+        }
+    }
+}
+
+Q5:
+
+using System;
+namespace Pointerprogram
+{
+    class DemoPointers
+    {
+        static void Main()
+        {
+            CastIntAndDoubles();
+        }
+
+        private static void CastIntAndDoubles()
+        // Cast an int variable into a double variable
+        {
+            int a = 10;
+            double b = a; //an int can be stored in a double
+            Console.WriteLine(b);
+            double c =9.8;
+            // Cast a double variable into an int variable 
+            int d = (int)c;
+            long e = 10;
+            int f = (int)e;
+            Console.WriteLine($"e is {e} and f is {f}");
+            e = long.MaxValue;
+            f = (int)e;
+            Console.WriteLine($"e is (e) and f is (f)");
+        }
+    }
+}
+
+Q6:
+
+using System;
+namespace Pointerprogram
+{
+    class DemoPointers
+    {
+        static void Main()
+        {
+            //CastIntAndDoubles();
+            ConvertToString();
+        }
+
+        private static void ConvertToString()
+        // Cast an int variable into a double variable
+        {
+            int number = 12;
+            Console.WriteLine(number.ToString());
+
+            bool boolean = true;
+            Console.WriteLine(boolean.ToString());
+
+            DateTime Now = DateTime.Now;
+            Console.WriteLine(Now.ToString());
+
+            Object me = new object();
+            Console.WriteLine(me.ToString());
+
+        }
+    }
+}
+
+Q7:
+
+using System;
+namespace Pointerprogram
+{
+    class DemoPointers
+    {
+        static void Main()
+        {
+            //CastIntAndDoubles();
+           // ConvertToString();
+            ParseToNumbersAndDates();
+        }
+
+        private static void ParseToNumbersAndDates()
+        {
+            int age = int.Parse("27");
+            DateTime Birthday = DateTime.Parse("4 july 1998");
+            Console.WriteLine($"I Was Born {age} Years Ago");
+            Console.WriteLine($"My Birthday Is {Birthday}.");
+            Console.WriteLine($"My Birthday Is {Birthday:D}.");
+
+        }
+        //private static void ConvertToString();
+       // private static void CastIntAndDoubles();
+    }
+}
